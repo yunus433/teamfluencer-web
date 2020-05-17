@@ -15,6 +15,7 @@ dotenv.config({ path: path.join(__dirname, ".env") });
 const PORT = process.env.PORT || 3000;
 const mongoUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/teamfluencer";
 
+const indexRouteController = require('./routes/indexRouteController');
 const apiRouteController = require('./routes/apiRouteController');
 
 const {
@@ -60,6 +61,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/', indexRouteController);
 app.use('/api', apiRouteController);
 
 server.listen(PORT, () => {
