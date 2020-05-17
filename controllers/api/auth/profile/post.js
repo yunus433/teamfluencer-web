@@ -19,7 +19,8 @@ module.exports = (req, res) => {
       notification_token: req.body.notification_token,
       country: req.body.country,
       city: req.body.city,
-      school: req.body.school
+      school: req.body.school,
+      completed: true
     },
     { new: true },
     (err, user) => {
