@@ -19,6 +19,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-session": "^1.17.0",
+    "favicon": "0.0.2",
     "helmet": "^3.21.2",
     "lodash": "^4.17.15",
     "moment-timezone": "^0.5.28",

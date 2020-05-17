@@ -7,6 +7,8 @@ const bodyParser = require('body-parser');
 const expressSession = require('express-session');
 const cloudinary = require('cloudinary');
 
+const favicon = require('serve-favicon');
+
 const app = express();
 const server = http.createServer(app);
 
@@ -43,6 +45,7 @@ mongoose.connect(mongoUri, {
 });
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 const session = expressSession({
   secret: SESSION_SECRET,
