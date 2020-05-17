@@ -13,6 +13,8 @@ module.exports = (user) => {
     name: user.name,
     age: getUserAge(user.birth_time.month, user.birth_time.year),
     school: user.school,
+    country: user.country,
+    city: user.city,
     birth_day: user.birth_time.day + "." + user.birth_time.month + "." + user.birth_time.year,
     completed: user.completed,
     profile_photo: user.profile_photo,

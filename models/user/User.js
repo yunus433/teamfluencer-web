@@ -56,6 +56,14 @@ const UserSchema = new Schema({
       year: null
     }
   },
+  country: {
+    type: String,
+    default: null
+  },
+  city: {
+    type: String,
+    default: null
+  },
   campaigns: {
     type: Array,
     default: []
