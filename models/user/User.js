@@ -23,6 +23,10 @@ const UserSchema = new Schema({
     type: String,
     default: null
   },
+  notification_token: {
+    type: String,
+    default: null
+  },
   profile_photo: {
     type: String,
     default: null

@@ -7,7 +7,7 @@ const isAPIAuthenticated = require('../middleware/isAPIAuthenticated');
 const signupPostController = require('../controllers/api/auth/signup/post');
 
 router.post(
-  '/signup',
+  '/auth/signup',
     isAPIAuthenticated,
     signupPostController
 );

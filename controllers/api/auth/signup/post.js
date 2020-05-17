@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-
 const User = require('../../../../models/user/User');
 
 const getUserObject = require('../../../../utils/getUserObject');
@@ -8,7 +6,7 @@ module.exports = (req, res) => {
   if (!req.body || !req.body.phone || !req.body.firebase_id)
     return res.status(400).json({ error: 'bad request' });
 
-  User.find({
+  User.findOne({
     phone: req.body.phone
   }, (err, user) => {
     if (err) return res.status(500).json({ error: 'mongo error: ' + err });
